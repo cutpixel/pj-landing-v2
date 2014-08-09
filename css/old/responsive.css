@@ -1,0 +1,624 @@
+@charset "UTF-8";
+/* ------------------------------------- */
+/* { Box-sizing: Border-box } Paul Irish */
+/* ------------------------------------- */
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+/* END { Box-sizing: Border-box } Paul Irish */
+/* ----------------------------------------- */
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		2;
+	dw-num-cols-desktop:	4;
+	dw-gutter-percentage:	5;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+/*	clear: both;
+*/	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* font sizes */
+/*
+@media (min-width: 858px) {html {font-size: 12px;}}
+@media (min-width: 780px) {html {font-size: 11px;}}
+@media (min-width: 702px) {html {font-size: 10px;}}
+@media (min-width: 724px) {html {font-size: 9px;}}
+@media (max-width: 623px) {html {font-size: 8px;}}
+*/
+/*
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+*/
+/* END font sizes */
+
+html{
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+}
+
+
+/* ---------------------------------------*/
+/* Mobile Device Layout: 480px and below. */ 
+/* ---------------------------------------*/
+/* MD */
+.gridContainer {
+	min-height:480px;
+	margin: 0 auto;
+	width: 100%;
+	padding: auto 0;
+	clear: none;
+	float: none;
+	background-color: #CCCCCC;
+}
+/* MD header */
+/* MD top navagation*/
+.top_nav {
+	padding: 14px 10px;
+	position: fixed;
+	height: 44px;
+	width: 100%;
+	display: inline-block;
+	background-color:#003C79;
+font-size: .75em;
+}
+/* MD */
+.top_nav ul {
+	list-style: none;
+}
+/* MD */
+.top_nav li {
+	background-color:#003C79;
+	color: #FFFFFF;
+}
+/* MD */
+.top_nav li:first-child {
+	float: left;
+}
+/* MD */
+.top_nav li:last-child {
+	float: right;
+	font-weight:bold;
+}
+/* MD */
+.top_nav a {
+	text-decoration: none;
+	background-color:#003C79;
+	color: #F17C0E;
+}
+/* MD */
+.top_nav a:hover {
+	color: #FFFFFF;
+}
+/* END top navagation */
+/* END header */
+/* MD main navagation */
+.main_nav {
+font-size: .75em;
+	margin-top:44px;
+	height: calc(100% - (44px + 40px));
+	width: 100%;
+		padding:5px;
+
+}
+/* MD */
+.main_nav ul {
+	list-style: none;
+}
+/* MD (height 99px) */
+.main_nav li {
+	display: block;
+/*	width: 50%;	*/
+width: calc(50% - (10px));
+height:auto;
+min-height:86px;
+height:auto !important;         for IE as it does not support min-height 
+height:86px;                    for IE as it does not support min-height 
+	float: left;
+  margin: 5px;
+}
+
+/* MD button colours */
+.main_nav li:nth-child(1) {
+  background-color: #E34C26;
+}
+.main_nav li:nth-child(2) {  
+  background-color: #F0DB4F;
+}
+.main_nav li:nth-child(3) {  
+  background-color: #7CCC14;
+}
+.main_nav li:nth-child(4) {  
+  background-color: #F17C0E;
+}
+.main_nav li:nth-child(5) {  
+  background-color: #6182B9;
+}
+.main_nav li:nth-child(6) {  
+  background-color: #00749A;
+}
+.main_nav li:nth-child(7) {  
+  background-color: #949998;
+}
+.main_nav li:nth-child(8) {
+	background-color:#000;
+}
+/* END MD button colours */
+/* MD link styles */
+.main_nav a:nth-child(1) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(2) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(3) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(4) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(5) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(6) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(7) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(8) {
+	text-decoration: none;
+	color: #FFF;
+}
+/* END MD button colours */
+
+
+/* MD */
+/*.main_nav li > a {
+*/  /* these are the flex items */
+/*  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+*/
+
+/* MD */
+.main_nav a {
+	display: block;
+	padding: 10px;
+	text-align: right;
+}
+/* END main navagation */
+/* MD footer */
+.footer {
+font-size: .75em;
+	padding: 13px 10px;
+	position: fixed; 
+    bottom: 0; 
+    left: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	display:block;
+	background-color:#393939;
+	color: #FFFFFF;
+}
+/* END footer */
+/* MD */
+.zeroMargin_mobile {
+margin-left: 0;
+}
+/* MD */
+.hide_mobile {
+display: none;
+}
+/* ------------------------------------------------------------------- */
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+/* ------------------------------------------------------------------- */
+@media only screen and (min-width: 480px) {
+/* T */
+.gridContainer {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+/* T header */
+/* T top navagation*/
+.top_nav {
+	padding: 13px 10px;
+	position: fixed;
+	height: 44px;
+	width: 100%;
+	display: inline-block;
+	background-color:#003C79;
+font-size: .83em;
+
+}
+/* T */
+.top_nav ul {
+	list-style: none;
+}
+/* T */
+.top_nav li {
+padding-left: 10px;
+padding-right: 10px;
+	color: #FFFFFF;
+	background-color:#003C79;
+
+}
+/* T */
+.top_nav li:first-child {
+	float: left;
+}
+/* T */
+.top_nav li:last-child {
+	float: right;
+}
+/* T */
+.top_nav a {
+	color: #F17C0E;
+	background-color:#003C79;
+}
+/* T */
+.top_nav a:hover {
+	color: #FFFFFF;
+}
+/* END top navagation */
+/* END header */
+
+/* T main navagation */
+.main_nav {
+font-size: .83em;
+	margin-top:44px;
+	height: calc(100% - (44px + 40px));
+	width: 100%;
+}
+/* T */
+.main_nav ul {
+	list-style: none;
+}
+/* T */
+.main_nav li {
+	display: block;
+	background-color: green;
+	height: calc(100% / 2);
+	width: calc(100% / 4);
+	float: left;
+min-height:116px;
+height:auto !important;         for IE as it does not support min-height 
+height:116px;                    for IE as it does not support min-height
+}
+/* T */
+.main_nav a {
+	bottom: 0; 
+    right: 0;
+	padding:10px;
+}
+/* END main navagation */
+/* T footer */
+.footer {
+font-size: .83em;
+	padding: 13px 10px;
+	position: fixed;
+    bottom: 0; 
+    left: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	display:block;
+	background-color:#393939;
+	color: #FFFFFF;
+}
+/* END footer */
+/* T */
+.hide_tablet {
+display: none;
+}
+/* T */
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* Tablet Landscape Layout: 769px to a max of 960px.  Inherits styles from: Mobile Device Layout and Tablet Layout. */
+/* ------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+/* TL */
+.gridContainer {
+	width: 100%;
+/*	max-width: 1232px;
+*/	padding-left: 0;
+	padding-right: 0;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+/* TL header */
+/* TL top navagation*/
+.top_nav {
+	padding: 13px 10px;
+	position: fixed;
+	height: 44px;
+	width: 100%;
+	display: inline-block;
+	background-color:#003C79;
+font-size: .83em;
+}
+/* TL */
+.top_nav ul {
+	list-style: none;
+}
+/* TL */
+.top_nav li {
+padding-left: 10px;
+padding-right: 10px;
+	color: #FFFFFF;
+	background-color:#003C79;
+
+}
+/* TL */
+.top_nav li:first-child {
+	float: left;
+}
+/* TL */
+.top_nav li:last-child {
+	float: right;
+}
+/* TL */
+.top_nav a {
+	color: #F17C0E;
+	background-color:#003C79;
+}
+/* TL */
+.top_nav a:hover {
+	color: #FFFFFF;
+}
+/* END top navagation */
+/* END header */
+
+/* TL main navagation */
+.main_nav {
+font-size: .83em;
+	margin-top:44px;
+	height: calc(100% - (44px + 40px));
+	width: 100%;
+}
+/* TL */
+.main_nav ul {
+	list-style: none;
+}
+
+/* TL */
+.main_nav li {
+	display:flex;
+	flex-direction: column;
+/*	height:100%;
+*/	display: block;
+	background-color: blue;
+	height: calc(100% / 2);
+	width: calc(100% / 2);
+	float: left;
+min-height:135px;
+height:auto !important;         for IE as it does not support min-height 
+height:135px;                    for IE as it does not support min-height
+}
+
+/* TL */
+.main_nav li > a {
+  /* these are the flex items */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* TL */
+.main_nav a {
+	bottom: 0; 
+    right: 0;
+	margin:50px;
+
+}
+/* END main navagation */
+/* TL footer */
+.footer {
+font-size: .83em;
+	padding: 13px 10px;
+	position: fixed;
+    bottom: 0; 
+    left: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	display:block;
+	background-color:#393939;
+	color: #FFFFFF;
+}
+/* END footer */
+/* TL */
+.zeroMargin_desktop {
+margin-left: 0;
+}
+/* TL */
+.hide_desktop {
+display: none;
+}
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+/* ------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 960px) {
+/* D */
+.gridContainer {
+	width: 100%;
+/*	max-width: 1232px;
+*/	padding-left: 0;
+	padding-right: 0;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+/* D header */
+/* D top navagation*/
+.top_nav {
+	padding: 13px 10px;
+	position: fixed;
+	height: 44px;
+	width: 100%;
+	display: inline-block;
+/*background-color: #A7A9AB;
+*/	background-color:#003C79;
+font-size: 1em;;
+}
+/* D */
+.top_nav ul {
+	list-style: none;
+}
+/* D */
+.top_nav li {
+padding-left: 10px;
+padding-right: 10px;
+	color: #FFFFFF;
+	background-color:#003C79;
+
+}
+/* D */
+.top_nav li:first-child {
+	float: left;
+}
+/* D */
+.top_nav li:last-child {
+	float: right;
+}
+/* D */
+.top_nav a {
+	color: #F17C0E;
+	background-color:#003C79;
+}
+/* D */
+.top_nav a:hover {
+	color: #FFFFFF;
+}
+/* END top navagation */
+/* END header */
+
+/* D main navagation */
+.main_nav {
+font-size: 1em;;
+	margin-top:44px;
+	height: calc(100% - (44px + 40px));
+	width: 100%;
+}
+/* D */
+.main_nav ul {
+	list-style: none;
+}
+
+/* D */
+.main_nav li {
+/*	display:flex;
+	flex-direction: column;*/
+/*	height:100%;
+*/	display: block;
+	background-color: blue;
+	height: calc(100% / 2);
+	width: calc(100% / 2);
+	float: left;
+min-height:155px;
+height:auto !important;         for IE as it does not support min-height 
+height:155px;                    for IE as it does not support min-height
+
+}
+
+/* D */
+/*.main_nav li > a {*/
+  /* these are the flex items */
+/*  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}*/
+
+/* D */
+.main_nav a {
+	bottom: 0; 
+    right: 0;
+	margin:50px;
+
+}
+/* END main navagation */
+/* D footer */
+.footer {
+font-size: 1em;;
+	padding: 13px 10px;
+	position: fixed;
+    bottom: 0; 
+    left: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	display:block;
+	background-color:#393939;
+	color: #FFFFFF;
+}
+/* END footer */
+/* D */
+.zeroMargin_desktop {
+margin-left: 0;
+}
+/* D */
+.hide_desktop {
+display: none;
+}
+}

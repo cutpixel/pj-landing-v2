@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+#page1,#page2,#page3,#page4,#page5,#page6,#page7,#page8*{
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: block;
+  height: 100%; 
+}
+*/
+
+/* home */
+/* block button colours */
+#page1.main_nav li:nth-child(7),
+#page1.main_nav li:nth-child(8){
+padding-bottom: 40px;
+}
+/* html_css */
+#page0.main_nav li:nth-child(1) {
+  background-color: #E34C26;
+}
+/* javascript_jquery */
+#page0.main_nav li:nth-child(2) { 
+  background-color: #F0DB4F;
+}
+/* responsive */
+#page0.main_nav li:nth-child(3) {  
+  background-color: #7CCC14;
+}
+/* internal_client */
+#page0.main_nav li:nth-child(4) {  
+  background-color: #F17C0E;
+}
+/* php */
+#page0.main_nav li:nth-child(5) {  
+  background-color: #6182B9;
+}
+/* wordpress */
+#page0.main_nav li:nth-child(6) {  
+  background-color: #00749A;
+}
+/* external_client */
+#page0.main_nav li:nth-child(7) {  
+  background-color: #949998;
+}
+/* portfolio */
+#page0.main_nav li:nth-child(8) {
+  background-color: #000000;
+}
+
+
+/* html_css */
+#page1.main_nav li:nth-child(1),
+#page1.main_nav li:nth-child(2){
+margin-top: 44px;
+}
+/* block button colours */
+#page1.main_nav li:nth-child(1) {
+  background-color: #E34C26;
+}
+#page1.main_nav li:nth-child(2) { 
+  background-color: #E34C26;
+}
+#page1.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page1.main_nav li:nth-child(4) {  
+  background-color: #E34C26;
+}
+#page1.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page1.main_nav li:nth-child(6) {  
+  background-color: #E34C26;
+}
+#page1.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page1.main_nav li:nth-child(8) {
+  background-color: #E34C26;
+}
+
+/* javascript_jquery */
+#page2.main_nav li:nth-child(1),
+#page2.main_nav li:nth-child(2){
+margin-top: 10px;
+}
+/* block button colours */
+#page2.main_nav li:nth-child(1) {
+  background-color: #F0DB4F;
+}
+#page2.main_nav li:nth-child(2) {  
+  background-color: #F0DB4F;
+}
+#page2.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page2.main_nav li:nth-child(4) {  
+  background-color: #F0DB4F;
+}
+#page2.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page2.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page2.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page2.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}
+
+/* responsive */
+#page3.main_nav li:nth-child(1),
+#page3.main_nav li:nth-child(2){
+margin-top: 12px;
+}
+/* block button colours */
+#page3.main_nav li:nth-child(1) {
+  background-color: #7CCC14;
+}
+#page3.main_nav li:nth-child(2) {  
+  background-color: #7CCC14;
+}
+#page3.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page3.main_nav li:nth-child(4) {  
+  background-color: #AAAAAA;
+}
+#page3.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page3.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page3.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page3.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}
+
+/* internal_client */
+#page4.main_nav li:nth-child(1),
+#page4.main_nav li:nth-child(2){
+margin-top: 12px;
+}
+/* block button colours */
+#page4.main_nav li:nth-child(1) {
+  background-color: #F17C0E;
+}
+#page4.main_nav li:nth-child(2) {  
+  background-color: #F17C0E;
+}
+#page4.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page4.main_nav li:nth-child(4) {  
+  background-color: #AAAAAA;
+}
+#page4.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page4.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page4.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page4.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}
+
+/* php */
+#page5.main_nav li:nth-child(1),
+#page5.main_nav li:nth-child(2){
+margin-top: 10px;
+}
+/* block button colours */
+#page5.main_nav li:nth-child(1) {
+  background-color: #6182B9;
+}
+#page5.main_nav li:nth-child(2) {  
+  background-color: #6182B9;
+}
+#page5.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page5.main_nav li:nth-child(4) {  
+  background-color: #AAAAAA;
+}
+#page5.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page5.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page5.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page5.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}
+
+/* wordpress */
+#page6.main_nav li:nth-child(1),
+#page6.main_nav li:nth-child(2){
+margin-top: 10px;
+}
+/* block button colours */
+#page6.main_nav li:nth-child(1) {
+  background-color: #00749A;
+}
+#page6.main_nav li:nth-child(2) {  
+  background-color: #00749A;
+}
+#page6.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page6.main_nav li:nth-child(4) {  
+  background-color: #AAAAAA;
+}
+#page6.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page6.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page6.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page6.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}
+
+/* external_client */
+#page7.main_nav li:nth-child(1),
+#page7.main_nav li:nth-child(2){
+margin-top: 12px;
+}
+/* block button colours */
+#page7.main_nav li:nth-child(1) {
+  background-color: #949998;
+}
+#page7.main_nav li:nth-child(2) {  
+  background-color: #949998;
+}
+#page7.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page7.main_nav li:nth-child(4) {  
+  background-color: #AAAAAA;
+}
+#page7.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page7.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page7.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page7.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}
+
+/* portfolio */
+#page8.main_nav li:nth-child(7),
+#page8.main_nav li:nth-child(8){
+margin-bottom: 50px;
+}
+/* block button colours */
+#page8.main_nav li:nth-child(1) {
+  background-color: #000000;
+}
+#page8.main_nav li:nth-child(2) {  
+  background-color: #000000;
+}
+#page8.main_nav li:nth-child(3) {  
+  background-color: #AAAAAA;
+}
+#page8.main_nav li:nth-child(4) {  
+  background-color: #AAAAAA;
+}
+#page8.main_nav li:nth-child(5) {  
+  background-color: #AAAAAA;
+}
+#page8.main_nav li:nth-child(6) {  
+  background-color: #AAAAAA;
+}
+#page8.main_nav li:nth-child(7) {  
+  background-color: #003C79;
+}
+#page8.main_nav li:nth-child(8) {
+  background-color: #AAAAAA;
+}

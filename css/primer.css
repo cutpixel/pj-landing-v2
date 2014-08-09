@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* { Box-sizing: Border-box } Paul Irish */
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+/* END --- { Box-sizing: Border-box } Paul Irish */
+
+/* Michael Whyte Additions... */
+
+/* add 100% height to html and body elements */
+html, 
+body {
+	height: 100%;	
+}
+
+.gridContainer {
+	height: -webkit-calc(100% - (44px + 40px)); /* 44px = height of nav bar -- 40px = height of footer */
+	height: calc(100% - (44px + 40px)); /* 44px = height of nav bar -- 40px = height of footer */
+	position: relative;
+	top: 44px; /* to push it down below the fixed positioned nav bar... */
+}
+
+.main_nav, 
+.main_nav>ul {
+	height: 100%;
+	padding: 5px;	
+}
+
+.main_nav>ul>li {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: -webkit-calc(50% - 5px);
+	width: calc(50% - 5px);
+	
+	/* Calculating height... */
+		
+	/* 
+	
+	m = margin value (5px (top) + 5px (bottom) = 10px)
+	t = number of margins
+	c = number of columns
+	h = total height available...
+
+	if...
+
+	m = 10px
+	t = 3
+	c = 4
+	h = 100%
+
+	then...
+
+	calc( ( h / c ) - ( ( m * t ) / c ) )
+
+	or...
+
+	calc( ( 100% / 4 ) - ( (10px * 3) / c ) )
+	
+	
+	*/
+	
+	height: -webkit-calc( ( 100% / 4 ) - ( (10px * 3) / 4 ) );
+	height: calc( ( 100% / 4 ) - ( (10px * 3) / 4 ) );
+}
+
+.main_nav>ul>li:nth-child(even) {
+	margin-right: 0;	
+}
+
+/* end Michael Whyte additions */
+
+/* links to projects */
+.clear{
+	clear:both;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+
+/* home */
+/*#page0{
+	position: absolute;
+	z-index:auto;
+}
+*//* html_css */
+/*#page1{
+	display:none;
+	position: absolute;
+	z-index:7;
+}
+*//* javascript_jquery */
+/*#page2{
+		display:none;
+	position: absolute;
+	z-index:6;
+}
+*//* responsive */
+/*#page3{
+		display:none;
+	position: absolute;
+	z-index:5;
+}
+*//* internal_client */
+/*#page4{
+		display:none;
+	position: absolute;
+	z-index:4;
+}
+*//* php */
+/*#page5{
+		display:none;
+	position: absolute;
+	z-index:3;
+}
+*//* wordpress */
+/*#page6{
+		display:none;
+	position: absolute;
+	z-index:2;
+}
+*//* external_client */
+/*#page7{
+		display:none;
+	position: absolute;
+	z-index:1;
+}
+*//* portfolio */
+/*#page8{
+		display:none;
+	position: absolute;
+	z-index:0;
+}
+*/

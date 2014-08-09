@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/* CSS Document */
+
+gridContainer {	
+	width: 100%;
+	padding: auto 0;
+	clear: none;
+	float: none;
+	background-color: #CCCCCC;
+}
+
+/* Top nav bar */
+.top_nav {
+	position: fixed;
+	height: 44px;
+	width: 100%;
+	display: inline-block;
+	background-color:#003C79;
+	z-index: 100000;
+}
+
+.top_nav>ul {
+	list-style: none;
+}
+
+.top_nav>ul>li {
+	color: #FFFFFF;
+}
+
+.top_nav>ul>li:first-child {
+	float: left;
+}
+
+.top_nav>ul>li:last-child {
+	float: right;
+	font-weight:bold;
+}
+
+.top_nav>ul>li:first-child>a {
+	text-decoration: none;
+	color: #F17C0E;
+}
+
+.top_nav>ul>li:first-child>a:hover {
+	color: #FFFFFF;
+}
+
+.top_nav>ul>li:last-child>a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.top_nav>ul>li:last-child>a:hover {
+	color: #F17C0E;
+}
+
+.top_nav>ul>li>a:hover,
+.top_nav>ul>li>a:focus {
+ color:red;
+}
+
+/* END - top navagation */
+/* END - header */
+
+/* main block button navagation */
+.main_nav {
+	width: 100%;
+	padding:5px;
+}
+
+.main_nav>ul {
+	list-style: none;
+}
+
+/* set min height of block buttons (height 86.5px) */
+.main_nav>ul>li {
+	position: relative;
+	min-height: -webkit-calc( ( 100% / 4 ) - ( 50px + ( 44 + 40 )) );	
+	min-height: calc( ( 100% / 4 ) - ( 50px + ( 44 + 40 )) );	
+	min-height: 86.5px;
+}
+
+/* block button colours */
+.main_nav>ul>li:nth-child(1) {
+  background-color: #E34C26;
+}
+.main_nav>ul>li:nth-child(2) {  
+  background-color: #F0DB4F;
+}
+.main_nav>ul>li:nth-child(3) {  
+  background-color: #7CCC14;
+}
+.main_nav>ul>li:nth-child(4) {  
+  background-color: #F17C0E;
+}
+.main_nav>ul>li:nth-child(5) {  
+  background-color: #6182B9;
+}
+.main_nav>ul>li:nth-child(6) {  
+  background-color: #00749A;
+}
+.main_nav>ul>li:nth-child(7) {  
+  background-color: #949998;
+}
+.main_nav>ul>li:nth-child(8) {
+	background-color:#000;
+}
+
+/* block button links */
+
+.fluid{
+width:100%;
+}
+
+/* block button - text */
+.text {
+	height: 100%;
+	display: block;
+	padding: 10px;
+	text-align: right;
+	color: #FFF;
+}
+/* block button - links */
+.links {
+}
+
+.fluid>.links {
+	position: absolute;
+	bottom:0;
+}
+
+.links>ol>li {
+}
+
+
+.links>li>a {
+		display:block;
+	margin: 10px 5px 10px 10px;
+	
+}
+
+/* block button link styles */
+.links :nth-child(1),
+.links :nth-child(2),
+.links :nth-child(3),
+.links :nth-child(4),
+.links :nth-child(5),
+.links :nth-child(6),
+.links :nth-child(7),
+.links :nth-child(8) {  
+	text-decoration: none;
+	color: #FFF;
+}
+/* END - main block button navagation */
+
+/* footer */
+.footer {
+	position: fixed; 
+    bottom: 0; 
+    left: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	display:block;
+	background-color:#393939;
+	color: #FFFFFF;
+}
+/* END - footer */
+
+/* fixes */
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+
+.hide_mobile {
+display: none;
+}
+
+
+
+/* Mobile portrait (320x480) */
+/* Mobile landscape (480x320) */
+
+/* Small tablet portrait (600x800) */
+/* Small tablet landscape (800x600) */
+
+/* Tablet portrait (768x1024) */
+/* Tablet landscape (1024x768) */
+
+
+
+
+
+/* iphone */
+/* Landscape */
+@media only screen and (min-width: 480px) { 
+.gridContainer {
+/*max-height:236px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 118px) */
+.main_nav li {
+
+/*height:auto;*/
+/*min-height:54px;*/
+/*height:auto !important;         for IE as it does not support min-height 
+height:54px;                    for IE as it does not support min-height */
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+/* Portrait */
+@media only screen and (min-width: 320px) {
+.gridContainer {
+/*min-height:480px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 99px) */
+.main_nav li {
+
+
+/*height:auto;
+min-height:86px;
+height:auto !important;         for IE as it does not support min-height 
+height:86px;                    for IE as it does not support min-height*/ 
+}
+
+
+.fluid>.links {
+	width:70%;
+	}
+
+
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+
+/* tablet */
+/* Landscape */
+@media (max-device-width: 1024px) and (orientation: landscape) { 
+.gridContainer {
+/*min-height:684px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 118px) */
+.main_nav li {
+
+
+/*height:auto;
+min-height:54px;
+height:auto !important;         for IE as it does not support min-height 
+height:54px;                    for IE as it does not support min-height */
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+/* Portrait */
+@media (max-device-width: 768px) and (orientation: portrait) { 
+.gridContainer {
+/*min-height:940px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 99px) */
+.main_nav li {
+
+/*height:auto;
+min-height:86px;
+height:auto !important;         for IE as it does not support min-height 
+height:86px;                    for IE as it does not support min-height */
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+

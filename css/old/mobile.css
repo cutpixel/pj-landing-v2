@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+/* Michael Whyte Additions... */
+
+/* add 100% height to html and body elements */
+html, 
+body {
+	height: 100%;	
+}
+
+.gridContainer {
+	height: -webkit-calc(100% - (44px + 40px)); /* 44px = height of nav bar -- 40px = height of footer */
+	height: calc(100% - (44px + 40px)); /* 44px = height of nav bar -- 40px = height of footer */
+	position: relative;
+	top: 44px; /* to push it down below the fixed positioned nav bar... */
+}
+
+.main_nav, 
+.main_nav ul {
+	height: 100%;
+	padding: 5px;	
+}
+
+.main_nav li {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: -webkit-calc(50% - 5px);
+	width: calc(50% - 5px);
+	
+	/* Calculating height... */
+		
+	/* 
+	
+	m = margin value (5px (top) + 5px (bottom) = 10px)
+	t = number of margins
+	c = number of columns
+	h = total height available...
+
+	if...
+
+	m = 10px
+	t = 3
+	c = 4
+	h = 100%
+
+	then...
+
+	calc( ( h / c ) - ( ( m * t ) / c ) )
+
+	or...
+
+	calc( ( 100% / 4 ) - ( (10px * 3) / c ) )
+	
+	
+	*/
+	
+	height: -webkit-calc( ( 100% / 4 ) - ( (10px * 3) / 4 ) );
+	height: calc( ( 100% / 4 ) - ( (10px * 3) / 4 ) );
+}
+
+.main_nav li:nth-child(even) {
+	margin-right: 0;	
+}
+
+/* end Michael Whyte additions */
+
+
+
+/* { Box-sizing: Border-box } Paul Irish */
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+/* END { Box-sizing: Border-box } Paul Irish */
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+.fluid {
+/*	clear: both; */
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+html{
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+}
+
+/* Mobile Device Layout: 480px and below. */ 
+
+/* MD */
+.gridContainer {
+/*min-height:480px;*/	
+	width: 100%;
+	padding: auto 0;
+	clear: none;
+	float: none;
+	background-color: #CCCCCC;
+}
+/* MD header */
+/* MD top navagation*/
+.top_nav {
+/*padding: 14px 10px;*/	
+	position: fixed;
+	height: 44px;
+	width: 100%;
+	display: inline-block;
+	background-color:#003C79;
+/*font-size: .75em;*/
+}
+/* MD */
+.top_nav ul {
+	list-style: none;
+}
+/* MD */
+.top_nav li {
+	background-color:#003C79;
+	color: #FFFFFF;
+}
+/* MD */
+.top_nav li:first-child {
+	float: left;
+}
+/* MD */
+.top_nav li:last-child {
+	float: right;
+	font-weight:bold;
+}
+/* MD */
+.top_nav a {
+	text-decoration: none;
+	background-color:#003C79;
+	color: #F17C0E;
+}
+/* MD */
+.top_nav a:hover {
+	color: #FFFFFF;
+}
+/* END top navagation */
+/* END header */
+/* MD main navagation */
+.main_nav {
+/*font-size: .75em;*/	
+	width: 100%;
+	padding:5px;
+
+}
+/* MD */
+.main_nav ul {
+	list-style: none;
+}
+/* MD (height 99px) */
+.main_nav li {
+	
+/*	width: 50%;	*/
+/*width: calc(50% - (10px));
+height:auto;
+min-height:86px;
+height:auto !important;         for IE as it does not support min-height 
+height:86px;                    for IE as it does not support min-height 
+*/	
+}
+
+/* MD button colours */
+.main_nav li:nth-child(1) {
+  background-color: #E34C26;
+}
+.main_nav li:nth-child(2) {  
+  background-color: #F0DB4F;
+}
+.main_nav li:nth-child(3) {  
+  background-color: #7CCC14;
+}
+.main_nav li:nth-child(4) {  
+  background-color: #F17C0E;
+}
+.main_nav li:nth-child(5) {  
+  background-color: #6182B9;
+}
+.main_nav li:nth-child(6) {  
+  background-color: #00749A;
+}
+.main_nav li:nth-child(7) {  
+  background-color: #949998;
+}
+.main_nav li:nth-child(8) {
+	background-color:#000;
+}
+/* END MD button colours */
+/* MD link styles */
+.main_nav a:nth-child(1) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(2) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(3) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(4) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(5) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(6) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(7) {  
+	text-decoration: none;
+	color: #FFF;
+}
+.main_nav a:nth-child(8) {
+	text-decoration: none;
+	color: #FFF;
+}
+/* END MD button colours */
+
+
+/* MD */
+/*.main_nav li > a {
+*/  /* these are the flex items */
+/*  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+*/
+
+/* MD */
+.main_nav a {
+	display: block;
+	padding: 10px;
+	text-align: right;
+}
+/* END main navagation */
+/* MD footer */
+.footer {
+/*font-size: .75em;
+padding: 13px 10px;*/	
+	position: fixed; 
+    bottom: 0; 
+    left: 0;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	display:block;
+	background-color:#393939;
+	color: #FFFFFF;
+}
+/* END footer */
+/* MD */
+.zeroMargin_mobile {
+margin-left: 0;
+}
+/* MD */
+.hide_mobile {
+display: none;
+}
+
+
+/* iphone */
+/* Landscape */
+@media only screen and (min-width: 480px) { 
+.gridContainer {
+/*max-height:236px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 118px) */
+.main_nav li {
+
+/*height:auto;*/
+/*min-height:54px;*/
+/*height:auto !important;         for IE as it does not support min-height 
+height:54px;                    for IE as it does not support min-height */
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+/* Portrait */
+@media only screen and (min-width: 320px) {
+.gridContainer {
+/*min-height:480px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 99px) */
+.main_nav li {
+
+
+/*height:auto;
+min-height:86px;
+height:auto !important;         for IE as it does not support min-height 
+height:86px;                    for IE as it does not support min-height*/ 
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+
+/* tablet */
+/* Landscape */
+@media (max-device-width: 1024px) and (orientation: landscape) { 
+.gridContainer {
+/*min-height:684px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 118px) */
+.main_nav li {
+
+
+/*height:auto;
+min-height:54px;
+height:auto !important;         for IE as it does not support min-height 
+height:54px;                    for IE as it does not support min-height */
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+/* Portrait */
+@media (max-device-width: 768px) and (orientation: portrait) { 
+.gridContainer {
+/*min-height:940px;*/
+}
+.top_nav {
+padding: 14px 10px;
+font-size: .75em;
+}
+.main_nav {
+font-size: .75em;
+}
+/* MD (height 99px) */
+.main_nav li {
+
+/*height:auto;
+min-height:86px;
+height:auto !important;         for IE as it does not support min-height 
+height:86px;                    for IE as it does not support min-height */
+}
+.footer {
+font-size: .75em;
+padding: 10px 10px;
+}
+}
+
